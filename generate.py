@@ -12,11 +12,11 @@ class DictEnum():
 	def __getattr__(self, name):
 		return self.data[name]
 
-puzzleLimit = 50
+puzzleLimit = 5
 
-print("<style>.spoiler {background: #ccc; color: transparent;} .spoiler:hover {color: black;}</style>")
+print("<style>.spoiler {background: #ccc; color: transparent;} .spoiler:hover {color: black;}</style>\n")
 
-print("The (Unoffical) Stack Exchange Puzzle Book\n==========================================\n\n\n* %d of the best puzzles and solutions submitted to puzzling.SE.\n* Arranged by [Matthew Consterdine](https://consto.uk/).\n* [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).\n\n***\n" % puzzleLimit)
+print("The (Unoffical) Stack Exchange Puzzle Book\n==========================================\n\n* %d of the best puzzles and solutions submitted to puzzling.SE.\n* Arranged by [Matthew Consterdine](https://consto.uk/).\n* [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).\n\n***\n" % puzzleLimit)
 
 headers = DictEnum(["Id", "URL", "Score", "ViewCount", "AnswerCount", "FavoriteCount", "Title", "Tags", "Body", "CreationDate", "OwnerUserId", "DisplayName", "Reputation", "Gold", "Silver", "Bronze", "AnswerId", "AnswerScore", "AnswerBody", "AnswerCreationDate", "AnswerOwnerId", "AnswerDisplayName", "AnswerReputation", "AnswerGold", "AnswerSilver", "AnswerBronze"])
 
