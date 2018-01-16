@@ -1,4 +1,6 @@
 *.csv
 book.txt
+book.tex
 book.pdf
+book.html
 tex2pdf.*/
