@@ -14,6 +14,7 @@ $endif$
 $if(beamerarticle)$
 \usepackage{beamerarticle} % needs to be loaded first
 $endif$
+\usepackage{extsizes}
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
@@ -313,13 +314,30 @@ $endfor$
 $endif$
 
 % Custom Stuff %
+\addtolength{\topmargin}{0.5in}
+\addtolength{\textheight}{-0.5in}
+\usepackage{enumitem}
 \usepackage{rotating}
 \usepackage{listings}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\rightmark}
+\fancyhead[R]{\thepage}
+
+% Redefine the plain page style
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[R]{\thepage}
+}
+
+\renewcommand{\headrulewidth}{0pt}
 \lstset{
 basicstyle=\small\ttfamily,
 columns=flexible,
 breaklines=true
 }
+\setlist[itemize]{leftmargin=*}
 
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}

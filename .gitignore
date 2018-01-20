@@ -2,5 +2,10 @@
 book.txt
 book.tex
 book.pdf
-book.html
+book.aux
+book.log
+book.out
+book.tex.bak
+book.toc
+output.pdf
 tex2pdf.*/
